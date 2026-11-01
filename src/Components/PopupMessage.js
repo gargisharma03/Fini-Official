@@ -20,6 +20,14 @@ export default function PopupMessage() {
     sessionStorage.setItem("popupShown", "true");
   };
 
+  
+  const handleBiddingBlitzClick = () => {
+    sessionStorage.setItem("popupShown", "true");
+    setShowPopup(false);
+    navigate("/biddingblitz");
+  };
+
+
   const handleNewsletterClick = () => {
     setShowPopup(false);
     // Set the flag before navigation
@@ -39,11 +47,11 @@ export default function PopupMessage() {
           ✕
         </button>
 
-        <h2>Stay Updated</h2>
-        <p>Check out our newsletter for the latest updates!</p>
+        <h2>Register Now</h2>
+        <p>Bidding Blitz is live!</p>
         <br/>
         <button
-          onClick={handleNewsletterClick}
+          onClick={handleBiddingBlitzClick}
           className="button"
         >
           Check out
